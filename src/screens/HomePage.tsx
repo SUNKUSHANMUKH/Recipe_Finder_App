@@ -18,6 +18,7 @@ import { RootStackParamList } from "../navigation/TabNavigation";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useNavigation } from "@react-navigation/native";
 import { Meal } from "./types";
+import Suprisebutton from "./Suprisebutton"
 
 const { width } = Dimensions.get("window");
 
@@ -176,6 +177,9 @@ const HomePage = () => {
                 <Text style={styles.appTitle}>
                   Recipe<Text style={styles.accent}>.Food</Text>
                 </Text>
+                <View style={{ flex: 1, backgroundColor: "#141e30", justifyContent: "center", alignItems: "center" }}>
+                  <Suprisebutton />
+                </View>
                 <TouchableOpacity onPress={() => navigation.navigate("ProfileScreen")}>
                   <Icon name="person-circle-outline" size={34} color="#fff" />
                 </TouchableOpacity>
